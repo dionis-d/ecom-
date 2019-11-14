@@ -1,0 +1,23 @@
+{
+  "name": "ecom",
+  "version": "1.0.0",
+  "description": "ecom full-stack",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "server": "nodemon index"
+  },
+  "keywords": [
+    "express",
+    "angular"
+  ],
+  "author": "Dionis Dimcea",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "npm": "^6.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
