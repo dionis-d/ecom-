@@ -14,10 +14,11 @@
   "author": "Dionis Dimcea",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongoose": "^5.7.10",
+    "mongoose": "^5.7.11",
     "morgan": "^1.9.1",
     "npm": "^6.13.0"
   },
