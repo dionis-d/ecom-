@@ -8,8 +8,9 @@ async function login(req, res) {
     const candidate = await User.findOne({email: userData.email});
 
     if (candidate) {
-        // check pass
-        const passwordResult = bcrypt.compareSync(userData.password);
+        // user found
+        const passwordResult = bcrypt.compareSync(userData.password, candidate.password);
+
         if (passwordResult) {
             // generate token
             const token = jwt.sign({
@@ -18,7 +19,7 @@ async function login(req, res) {
             }, keys.jwt , {expiresIn: 60 * 60});
 
             res.status(200).json({
-                token: token
+                token: `Bearer ${token}`
             });
         } else {
             //incorrect password

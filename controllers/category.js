@@ -1,5 +1,5 @@
 function getAll(req, res) {
-
+res.json({message:'categories'})
 }
 
 function getById(req, res) {
