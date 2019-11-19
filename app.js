@@ -10,10 +10,11 @@ const categoryRoutes = require('./routes/category');
 const orderRoutes = require('./routes/order');
 const positionRoutes = require('./routes/position');
 const keys = require('./config/keys');
+const mongoCfg = require('./config/mongooseCfg');
 const app = express();
 
 //connect mongo
-mongoose.connect(keys.MONGO_URI)
+mongoose.connect(keys.MONGO_URI, mongoCfg.CFG)
     .then(() => console.log('MongoDB connected'))
     .catch(error => console.log(error));
 
